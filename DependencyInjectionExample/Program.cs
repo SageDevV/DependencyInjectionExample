@@ -1,4 +1,4 @@
-using DependencyInjectionExample;
+using DependencyInjectionExample.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,9 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<PrimaryObject>();
-builder.Services.AddScoped<SecondaryObject>();
-builder.Services.AddTransient<TertiaryObject>();
+builder.Services.AddSingleton<SingletonRequest>();
 
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
@@ -18,29 +16,17 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapGet("/", (
-        PrimaryObject primaryObject,
-        SecondaryObject secondaryObject,
-        TertiaryObject tertiaryObject) =>
+        SingletonRequest primaryObject) =>
     new
     {
         Id = Guid.NewGuid(),
-        PrimaryObjectId = primaryObject.Id,
-        SecondaryObject = new
-        {
-            Id = secondaryObject.Id,
-            PrimaryObjectId = secondaryObject.PrimaryObjectId
-        },
-
-        TertiaryObject = new
-        {
-            Id = secondaryObject.Id,
-            PrimaryObjectId = tertiaryObject.PrimaryObjectId,
-            SecondaryObjectId = tertiaryObject.SecondaryObjectId,
-            SecondaryObjectNewInstanceId = tertiaryObject.SecondaryObjectId,
-        }
+        PrimaryObject = primaryObject.Id,
     });
 
+
+var singletonInstance = Singleton.GetInstance();
+var singletonText = singletonInstance.someBusinessLogic();
 app.UseHttpsRedirection();
-app.UseAuthorization();
 app.MapControllers();
 app.Run();
+
