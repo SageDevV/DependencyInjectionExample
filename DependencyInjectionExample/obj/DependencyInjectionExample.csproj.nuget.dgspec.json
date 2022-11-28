@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Workspace\\BE\\DependencyInjectionExample\\DependencyInjectionExample\\DependencyInjectionExample.csproj": {}
+    "C:\\Workspace\\BE\\DesignerPatternSingleton\\DependencyInjectionExample\\DependencyInjectionExample.csproj": {}
   },
   "projects": {
-    "C:\\Workspace\\BE\\DependencyInjectionExample\\DependencyInjectionExample\\DependencyInjectionExample.csproj": {
+    "C:\\Workspace\\BE\\DesignerPatternSingleton\\DependencyInjectionExample\\DependencyInjectionExample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Workspace\\BE\\DependencyInjectionExample\\DependencyInjectionExample\\DependencyInjectionExample.csproj",
+        "projectUniqueName": "C:\\Workspace\\BE\\DesignerPatternSingleton\\DependencyInjectionExample\\DependencyInjectionExample.csproj",
         "projectName": "DependencyInjectionExample",
-        "projectPath": "C:\\Workspace\\BE\\DependencyInjectionExample\\DependencyInjectionExample\\DependencyInjectionExample.csproj",
-        "packagesPath": "C:\\Users\\Pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Workspace\\BE\\DependencyInjectionExample\\DependencyInjectionExample\\obj\\",
+        "projectPath": "C:\\Workspace\\BE\\DesignerPatternSingleton\\DependencyInjectionExample\\DependencyInjectionExample.csproj",
+        "packagesPath": "C:\\Users\\sageo\\.nuget\\packages\\",
+        "outputPath": "C:\\Workspace\\BE\\DesignerPatternSingleton\\DependencyInjectionExample\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sageo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

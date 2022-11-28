@@ -26,6 +26,8 @@ app.MapGet("/", (
 
 var singletonInstance = Singleton.GetInstance();
 var singletonText = singletonInstance.someBusinessLogic();
+//var singletonText2 = new Singleton();
+
 app.UseHttpsRedirection();
 app.MapControllers();
 app.Run();
